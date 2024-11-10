@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 20px 40px;  /* Larger padding for larger screens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 70px;  /* Slightly larger logo for better visibility on larger screens */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 25px;
+}
+
+.movie-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;  /* Card width for larger screens */
+    margin: 20px;
+    height: 450px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 60%;  /* Maintains image size on larger screens */
+}
+
+.movie-details {
+    padding: 15px;
+}
+
+.movie-details h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.movie-details p {
+    margin: 0 0 15px;
+    color: #666;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;  /* Ensure buttons wrap on smaller screens */
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: opacity 0.2s ease-in-out; /* Smooth hover transition */
+}
+
+.watch-trailer {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.more-info {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.add-favorites {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+.rate-movie {
+    background-color: #ff5733;
+    color: #fff;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Laptop and Tablet screens (larger devices) */
+@media (max-width: 1024px) {
+    .movie-card {
+        width: 48%;  /* Cards take up 48% width on tablets/laptops for better distribution */
+        height: 400px;  /* Adjusted height for better fitting */
+    }
+
+    .buttons {
+        justify-content: space-evenly; /* Space buttons evenly on larger screens */
+    }
+
+    .navbar {
+        padding: 15px 30px;  /* Slightly reduced padding for medium screens */
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .logo img {
+        height: 65px;
+    }
+
+    .movie-details h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Mobile screens (below 768px) */
+@media (max-width: 768px) {
+    .movie-card {
+        width: 100%;  /* Full width for smaller screens */
+        height: auto;  /* Auto height for flexibility */
+        margin: 10px 0;
+    }
+
+    .buttons {
+        flex-direction: column;  /* Stack buttons vertically on small screens */
+        gap: 8px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1em;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .movie-details h2 {
+        font-size: 1.1em;
+    }
+
+    .buttons .button {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
+}
+
+/* Extra Small mobile screens (below 480px) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 10px;  /* Further reduce padding for very small screens */
+    }
+
+    .nav-links a {
+        font-size: 0.9em;
+    }
+
+    .buttons .button {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}
